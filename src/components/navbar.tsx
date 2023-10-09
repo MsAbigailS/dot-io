@@ -18,6 +18,7 @@ import { ScoresComponent } from './scoresComponent';
 import InfoIcon from '../../src/pages/test/components/InfoIcon';
 import type { TrainingLevels } from '../../src/models/trainingLevels';
 import Circle from './CircleHighlight';
+import AnalyticalDashboardButton from '../../src/pages/test/components/AnalyticalDashboardButton';
 import HamburgerMenu from './hamburgerMenu';
 
 const Navbar = (): ReactElement => {
@@ -177,6 +178,14 @@ const Navbar = (): ReactElement => {
           </NavMenuLink>
         </NavMenu>
         <ScoresComponent />
+
+        <NavBtnLink
+          href="#/analyticalDashboard"
+          onClick={() => setTrainingLevel('')}
+        >
+          <AnalyticalDashboardButton />
+        </NavBtnLink>
+
         <NavBtn>
           <NavMenuLink aria-current="page">
             <NavLinksImage open={false} src={Crown_Icon} alt="" />
